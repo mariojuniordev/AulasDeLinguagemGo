@@ -22,6 +22,7 @@ type Carro struct {
 
 //Caso a função contenha erro, é necessário colocar error logo
 //após o nome da função (método)
+
 func (carro *Carro) acelerar() error {
 	if carro.velocidade < 15 {
 		carro.velocidade += 5
