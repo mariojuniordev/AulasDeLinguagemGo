@@ -1,0 +1,4 @@
+PROBLEMAS:
+Aula 72. Modelo de Usuário
+Aula 83. Exclusão de Usuário
+Aual 93. Tabela de Seguidores

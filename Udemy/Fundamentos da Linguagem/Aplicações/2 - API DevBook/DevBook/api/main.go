@@ -13,7 +13,7 @@ func main() {
 
 	fmt.Println(config.StringConexaoBanco)
 
-	fmt.Println("Rodando API!")
+	fmt.Println("Esuctando na porta 5000")
 
 	//Gera um novo Router e encapsula numa variável
 	r := router.Gerar()
