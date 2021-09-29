@@ -20,14 +20,14 @@ var rotasUsuarios = []Rota{
 		URI:    "/usuarios", 
 		Metodo: http.MethodGet, //o método .MethodGet BUSCA dados de um cliente HTTP no servidor
 		Funcao: controllers.BuscarUsuarios,
-		RequerAutenticacao: false,
+		RequerAutenticacao: true,
 	},
 	{
 		//GET com userId
 		URI:    "/usuarios/{usuarioId}",
 		Metodo: http.MethodGet, 
 		Funcao: controllers.BuscarUsuario,
-		RequerAutenticacao: false,
+		RequerAutenticacao: true,
 	},
 	{
 		//PUT
@@ -35,13 +35,43 @@ var rotasUsuarios = []Rota{
 		Metodo: http.MethodPut, //O método .MethodPut faz requisição para armazenar a entidade-corpo num local
 		//espicificado pela URL
 		Funcao: controllers.AtualizarUsuario,
-		RequerAutenticacao: false,
+		RequerAutenticacao: true,
 	},
 	{
 		//DELETE
 		URI:    "/usuarios/{usuarioId}",
 		Metodo: http.MethodDelete, //O método .MethodDelete é usado para DELETAR um recurso do servidor
 		Funcao: controllers.DeletarUsuario,
-		RequerAutenticacao: false,
+		RequerAutenticacao: true,
+	},
+	{
+		URI: "/usuario/{usuarioId}/seguir",
+		Metodo: http.MethodPost,
+		Funcao: controllers.SeguirUsuario,
+		RequerAutenticacao: true,
+	},
+	{
+		URI: "/usuario/{usuarioId}/parar-de-seguir",
+		Metodo: http.MethodPost,
+		Funcao: controllers.PararDeSeguirUsuario,
+		RequerAutenticacao: true,
+	},
+	{
+		URI: "/usuarios/{usuarioId}/seguidores",
+		Metodo: http.MethodGet,
+		Funcao: controllers.BuscarSeguidores,
+		RequerAutenticacao: true,
+	},
+	{
+		URI: "/usuarios/{usuarioId}/seguindo",
+		Metodo: http.MethodGet,
+		Funcao: controllers.BuscarSeguindo,
+		RequerAutenticacao: true,
+	},
+	{
+		URI: "/usuarios/{usuarioId}/atualizar-senha",
+		Metodo: http.MethodPost,
+		Funcao: controllers.AtualizarSenha,
+		RequerAutenticacao: true,
 	},
 }
